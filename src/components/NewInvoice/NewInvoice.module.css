@@ -1,0 +1,13 @@
+.outlinedButton {
+  border: 1px solid #D0D5DD !important;
+  border-radius: 8px !important;
+  color: #344054 !important;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+  text-transform: capitalize !important;
+}
+
+.filledButton {
+  margin-left: 16px !important;
+  background-color: #7F56D9 !important;
+  text-transform: capitalize !important;
+}
