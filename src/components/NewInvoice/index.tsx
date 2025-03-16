@@ -1,11 +1,6 @@
 import React from "react";
 import { Formik, Form } from "formik";
-import {
-  Box,
-  Grid2,
-  Divider,
-  Container,
-} from "@mui/material";
+import { Box, Grid2, Divider, Container } from "@mui/material";
 import InvoiceForm from "./InvoiceForm";
 import InvoicePreview from "./InvoicePreview";
 import { createInvoiceInitialValues } from "../../utils/utils";
@@ -13,15 +8,16 @@ import { validationSchema } from "../../validations/invoice";
 import { FormValues } from "../../types/invoice";
 import logo from "../../assets/images/logos/logo.png";
 import FormHeader from "./FormHeader";
+import { showToast } from "../ToastNotification";
 
 interface NewInvoiceProps {
   handleCreate: (values: FormValues, { resetForm }: any) => void;
 }
 
-const NewInvoice: React.FC<NewInvoiceProps> = ({handleCreate}) => {
+const NewInvoice: React.FC<NewInvoiceProps> = ({ handleCreate }) => {
   const handleSubmit = (values: FormValues, { resetForm }: any) => {
     console.log("Submitted Invoice Data:", values);
-    handleCreate(values, {resetForm})
+    handleCreate(values, { resetForm });
   };
 
   return (
@@ -43,7 +39,7 @@ const NewInvoice: React.FC<NewInvoiceProps> = ({handleCreate}) => {
             src={logo}
             alt="Company Logo"
           />
-          <Divider sx={{ marginY: 2, color: "#EAECF0", opacity: "100%" }}/>
+          <Divider sx={{ marginY: 2, color: "#EAECF0", opacity: "100%" }} />
           <Container maxWidth="lg">
             <FormHeader handleSubmit={handleSubmit} handleReset={handleReset} />
             <Grid2
