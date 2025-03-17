@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# 🚀 Invoice Form with Real-Time Data Updates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React.js** project that allows users to create invoices with real-time data updates. The form includes features such as **form validation, reset functionality, GraphQL API integration, and real-time invoice preview**. The design follows the **Figma** specifications and ensures a **pixel-perfect responsive layout**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Features
 
-### `npm start`
+### **Invoice Form**
+- **Structured sections:** "Bill From," "Bill To," "Invoice Details," and "Items List."
+- **Form validation:** All fields are required.
+- **Invoice Date:** Defaults to the current date.
+- **Price calculations:**
+  - Calculate the **price per item** dynamically.
+  - Compute the **total amount after a 10% tax deduction**.
+- **Invoice Terms:** Supports `NET_10_DAYS`, `NET_20_DAYS`, and `NET_30_DAYS`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### **Real-Time Data Display**
+- Displays **live invoice details** as the user fills the form.
+- Updates **instantly** when user modifies form fields.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### **Reset Functionality**
+- **"Reset" button** clears the form and invoice preview.
 
-### `npm test`
+### **Save Functionality**
+- Saves invoice data to a **GraphQL API** using a **mutation**.
+- Shows a **toast message: "Invoice created successfully!"**.
+- **Resets form fields** after successful creation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Design & Responsiveness**
+- **Pixel-perfect design** following Figma specifications.
+- Fully **responsive layout** for different screen sizes.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React.js (React Hooks, Context API)
+- **Form Handling**: Formik + Yup (for validation)
+- **UI Library**: Material-UI / Tailwind CSS (choose one)
+- **Notifications**: React-Toastify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/your-username/invoice-form.git
+cd invoice-form
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3️⃣ Configure Environment Variables
+- Create a .env file in the root directory:
+```sh
+REACT_APP_GRAPHQL_API_URL=https://your-graphql-api.com/graphql
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4️⃣ Start the Development Server
+```sh
+npm start
+```
