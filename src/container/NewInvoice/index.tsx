@@ -3,10 +3,12 @@ import NewInvoice from "../../components/NewInvoice";
 import { FormValues } from "../../types/invoice";
 import { showToast } from "../../components/ToastNotification";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const NewInvoiceContainer = () => {
   const handleCreate = async (values: FormValues, { resetForm }: any) => {
     try {
-      const response = await fetch("http://localhost:5000/api/invoices", {
+      const response = await fetch(`${API_URL}/invoices`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
