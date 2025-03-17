@@ -8,7 +8,6 @@ import { validationSchema } from "../../validations/invoice";
 import { FormValues } from "../../types/invoice";
 import logo from "../../assets/images/logos/logo.png";
 import FormHeader from "./FormHeader";
-import { showToast } from "../ToastNotification";
 
 interface NewInvoiceProps {
   handleCreate: (values: FormValues, { resetForm }: any) => void;

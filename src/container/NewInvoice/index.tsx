@@ -6,13 +6,14 @@ import { showToast } from "../../components/ToastNotification";
 const NewInvoiceContainer = () => {
   const handleCreate = async (values: FormValues, { resetForm }: any) => {
     try {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts",
-        {
-          method: "POST",
-          body: JSON.stringify(values),
-        }
-      );
+      const response = await fetch("http://localhost:5000/api/invoices", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      
       if (!response.ok) throw Error("Error creating invoice");
 
       showToast({
